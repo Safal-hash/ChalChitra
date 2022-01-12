@@ -73,20 +73,24 @@
 <!--Login Form Page-->
 
     <div class="d-none d-lg-block container needs-validation  w-25">
-        <form class="mt-4 text-primary  ">
+        <form class="mt-4 text-primary" action="signup.php" method="post">
             <div class="mb-3  ">
                 <label class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name="email" required>
 
             </div>
             <div class="mb-3  ">
                 <label class="form-label">Username</label>
-                <input type="text" class="form-control" id="validationCustomUsername" required>
+                <input type="text" class="form-control" id="validationCustomUsername" name="username" required>
 
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ConfirmPassword</label>
+                <input type="password" class="form-control" id="password" name="cpassword" required>
             </div>
             <div class="form-check mb-3 ">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -107,20 +111,24 @@
 
     </div>
     <div class="d-none d-md-block d-lg-none container  w-50">
-        <form class="mt-4 text-primary  ">
+        <form class="mt-4 text-primary" action="signup.php" method="post">
             <div class="mb-3  ">
                 <label class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name="email" required>
 
             </div>
             <div class="mb-3  ">
                 <label class="form-label">Username</label>
-                <input type="text" class="form-control" id="validationCustomUsername" required>
+                <input type="text" class="form-control" id="validationCustomUsername" name="username" required>
 
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ConfirmPassword</label>
+                <input type="password" class="form-control" id="password" name="cpassword" required>
             </div>
             <div class="form-check mb-3 ">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -141,20 +149,24 @@
 
 
     <div class="d-md-none container">
-        <form class="mt-4 text-primary  ">
+        <form class="mt-4 text-primary" action="signup.php" method="post">
             <div class="mb-3  ">
                 <label class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name="email" required>
 
             </div>
             <div class="mb-3  ">
                 <label class="form-label">Username</label>
-                <input type="text" class="form-control" id="validationCustomUsername" required>
+                <input type="text" class="form-control" id="validationCustomUsername" name="username" required>
 
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ConfirmPassword</label>
+                <input type="password" class="form-control" id="password" name="cpassword" required>
             </div>
             <div class="form-check mb-3 ">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -188,4 +200,4 @@
 
 </body>
 
-</html>
+</html> 
