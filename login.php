@@ -1,26 +1,32 @@
-<?php 
+<?php
+
 $servername = "localhost";
  $username = "root"; 
  $password = ""; 
- $dbname = "mydb"; 
+ $dbname = "chalchitra"; 
 
 
 
-$uname=$_POST['username'];
-$pass=$_POST['password']; 
+$email=$_POST['email'];
+$pass=$_POST['password'];
+
+
+$e_pass=md5($pass);
 $conn= mysqli_connect($servername,$username,$password,$dbname); 
 if(!$conn){
 echo ("conneciton failed:". mysqli_connect_error()); 
 }   
-$sql = "SELECT id FROM user WHERE username='$uname' AND Password='$pass'"; 
+$sql = "SELECT id FROM user WHERE Email='$email' AND Password='$e_pass'"; 
 $result = mysqli_query($conn,$sql);  
 
 
 if(mysqli_num_rows($result)>0){
-     header('location:https://www.youtube.com/watch?v=k-P6P_-rdjg');
-     session_start(); 
+    
+     header('location:success.php');
+     
     } 
     else {
          header('location:failed.html');
     }
-    ?>
+?>
+
