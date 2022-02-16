@@ -72,17 +72,10 @@ if(mysqli_num_rows($result)>0){
 </div>';
 }
 else{
-$sql = "INSERT INTO user (Email, Password)
-VALUES ('$email','$e_pass' )";
-
-if (mysqli_query($conn,$sql)){
- 
-  echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
-   Registered successfully!You can login in by <strong><a href="login.html">clicking here</a></strong>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>';
- 
-}
+    session_start();
+    $_SESSION['email']=$email;
+    $_SESSION['pass']=$e_pass;
+header('location:esewa.html');
 }
 
 
