@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +38,7 @@
         <!--text-->
 
         <div class="position-absolute top-50 start-50 translate-middle col-3">
-            <?php
+<?php
 
 if ($_SERVER['REQUEST_METHOD']== 'POST'){
      
@@ -47,12 +48,8 @@ $password = "";
 $dbname = "chalchitra"; 
 
 
-
 $email=$_POST['email'];
 $pass=$_POST['password'];
-
-
-$e_pass=md5($pass);
 
 
 
@@ -72,10 +69,9 @@ if(mysqli_num_rows($result)>0){
 </div>';
 }
 else{
-    session_start();
-    $_SESSION['email']=$email;
-    $_SESSION['pass']=$e_pass;
-header('location:esewa.html');
+$sql='INSERT into temp ( `Email`, `password`) values ("'.$email.'", "'.$pass.'")';
+$temp_result = mysqli_query($conn,$sql);
+header('location:esewa.php');
 }
 
 
